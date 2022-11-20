@@ -4,11 +4,17 @@ docker pull
 
 docker run hello-world
 docker pull mongo:4.1
+docker pull ubuntu/apache2:latest
 docker images
 docker container
 docker container ls
 docker container ls -all
 docker container create --name mongoserver1 mongo:4.1
+docker container create --name mongoserver1 -p 8080:27017 mongo:4.1
 docker container rm 6f529276ea13
+docker container rm mongoserver1
+docker container rm mongoserver1 mongoserver2
 docker container start mongoserver1
 docker container stop mongoserver1
+docker container stop mongoserver1 mongoserver2
+
