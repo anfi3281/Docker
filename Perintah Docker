@@ -8,7 +8,7 @@ docker pull ubuntu/apache2:latest
 docker images
 docker container
 docker container ls
-docker container ls -all
+docker container ls --all
 docker container create --name mongoserver1 mongo:4.1
 docker container create --name mongoserver1 -p 8080:27017 mongo:4.1
 docker container rm 6f529276ea13
