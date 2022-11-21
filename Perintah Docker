@@ -6,6 +6,8 @@ docker run hello-world
 docker pull mongo:4.1
 docker pull ubuntu/apache2:latest
 docker images
+docker image rm hello-world
+docker image rm hello-world:latest
 docker container
 docker container ls
 docker container ls --all
@@ -17,4 +19,7 @@ docker container rm mongoserver1 mongoserver2
 docker container start mongoserver1
 docker container stop mongoserver1
 docker container stop mongoserver1 mongoserver2
-
+docker build app-golang:1.0 /home/anfee/docker/membuat\ image
+docker tag local-image:tagname reponame:tagname
+docker push reponame:tag
+docker login
